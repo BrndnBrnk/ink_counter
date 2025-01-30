@@ -1,0 +1,192 @@
+[
+  {
+    "id": 1,
+    "error": {
+      "title": "Paper Jam",
+      "text": "Paper is stuck. Discard 1 card to fix?",
+      "answers": {
+        "yes": {
+          "next": true,
+          "callback": null,
+          "params": null
+        },
+        "no": {
+          "next": false,
+          "callback": null,
+          "params": null
+        }
+      }
+    }
+  },
+  {
+    "id": 2,
+    "error": {
+      "title": "Out of Color",
+      "text": "Out of cyan. Spend 2 cyan ink to fix?",
+      "answers": {
+        "yes": {
+          "next": true,
+          "callback": "onInkSpend",
+          "params": [2, "cyan"]
+        },
+        "no": {
+          "next": true,
+          "callback": "onQualityDown",
+          "params": null
+        }
+      }
+    }
+  },
+  {
+    "id": 2,
+    "error": {
+      "title": "Out of Color",
+      "text": "Out of magenta. Spend 2 magenta ink to fix?",
+      "answers": {
+        "yes": {
+          "next": true,
+          "callback": "onInkSpend",
+          "params": [2, "magenta"]
+        },
+        "no": {
+          "next": true,
+          "callback": "onQualityDown",
+          "params": null
+        }
+      }
+    }
+  },
+  {
+    "id": 4,
+    "error": {
+      "title": "Out of Color",
+      "text": "Out of yellow. Spend 2 yellow ink to fix?",
+      "answers": {
+        "yes": {
+          "next": true,
+          "callback": "onInkSpend",
+          "params": [2, "yellow"]
+        },
+        "no": {
+          "next": true,
+          "callback": "onQualityDown",
+          "params": null
+        }
+      }
+    }
+  },
+  {
+    "id": 5,
+    "error": {
+      "title": "Out of Black",
+      "text": "Out of black. Spend 2 black ink to fix?",
+      "answers": {
+        "yes": {
+          "next": true,
+          "callback": "onInkSpend",
+          "params": [2, "black"]
+        },
+        "no": {
+          "next": true,
+          "callback": "onQualityDown",
+          "params": null
+        }
+      }
+    }
+  },
+  {
+    "id": 6,
+    "error": {
+      "title": "Cartridge Error",
+      "text": "Can't detect cyan cartridge. Spend 1 cyan ink to fix?",
+      "answers": {
+        "yes": {
+          "next": true,
+          "callback": "onInkSpend",
+          "params": [1, "cyan"]
+        },
+        "no": {
+          "next": true,
+          "callback": "onCartridgeNotDetected",
+          "params": ["cyan"]
+        }
+      }
+    }
+  },
+  {
+    "id": 7,
+    "error": {
+      "title": "Cartridge Error",
+      "text": "Can't detect magenta cartridge. Spend 1 magenta ink to fix?",
+      "answers": {
+        "yes": {
+          "next": true,
+          "callback": "onInkSpend",
+          "params": [1, "magenta"]
+        },
+        "no": {
+          "next": true,
+          "callback": "onCartridgeNotDetected",
+          "params": ["magenta"]
+        }
+      }
+    }
+  },
+  {
+    "id": 8,
+    "error": {
+      "title": "Cartridge Error",
+      "text": "Can't detect yellow cartridge. Spend 1 yellow ink to fix?",
+      "answers": {
+        "yes": {
+          "next": true,
+          "callback": "onInkSpend",
+          "params": [1, "yellow"]
+        },
+        "no": {
+          "next": true,
+          "callback": "onCartridgeNotDetected",
+          "params": ["yellow"]
+        }
+      }
+    }
+  },
+  {
+    "id": 9,
+    "error": {
+      "title": "Cartridge Error",
+      "text": "Can't detect black cartridge. Spend 1 black ink to fix?",
+      "answers": {
+        "yes": {
+          "next": true,
+          "callback": "onInkSpend",
+          "params": [2, "black"]
+        },
+        "no": {
+          "next": true,
+          "callback": "onCartridgeNotDetected",
+          "params": ["black"]
+        }
+      }
+    }
+  },
+  {
+    "id": 10,
+    "error": {
+      "title": "No Connection",
+      "text": "Can't find printer. Press continue to reconnect or print local",
+      "answers": {
+        "continue": {
+          "next": true,
+          "callback": null,
+          "params": null
+        },
+        "abort": {
+          "next": false,
+          "callback": null,
+          "params": null
+        }
+      }
+    }
+  }
+]
